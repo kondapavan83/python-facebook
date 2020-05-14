@@ -1,0 +1,45 @@
+sp=[]
+sd={}
+for word in wordDict:
+     for each in str:
+             sp.append(list(each.rpartition(word)))
+
+for i in sp:
+     for j,k in enumerate(i):
+             if k!='':
+                     i[j]=k.rsplit(word)
+             else:
+                     i.pop(j)
+sd={}
+for word in wordDict:
+    sd[word]=s.split(word)
+
+for word,lis in sd.items():
+    w=wordDict.copy()
+    w.remove(word)
+    for wrd in w:
+            for each in lis:
+                    if each=='':
+                            continue
+                    else:
+                            x=each.split(wrd)
+                            sd[word].append({wrd:(x)})
+
+
+-------------------------------------------------
+dc={}
+for word in wordDict:
+     dc[word]=[]
+
+
+for word in wordDict:
+     if word in st:
+             indx=st.index(word)
+             dc[word].append(indx)
+             for i in range((len(st)/2)+1):
+               if indx <= len(st) and word in st[indx+len(word):]:
+                        indx2=st[indx+len(word):].index(word)
+                        indx=indx2
+                        dc[word].append(indx)
+               else:
+                        break

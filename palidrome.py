@@ -1,5 +1,10 @@
-def ispalindrome(a):
+def ispalindrome(x):
     pc=None
+    x=x.lower()
+    a=''
+    for i in x:
+        if i.isalnum():
+            a=a+i
     for i,j in enumerate(a):
         if a[i]==a[-(i+1)]:
             pc=True
@@ -9,4 +14,4 @@ def ispalindrome(a):
             break
     return pc
 
-ispalindrome(input())
+print(ispalindrome(input()))
