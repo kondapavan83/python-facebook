@@ -11,4 +11,6 @@ def lstdepth(ls):
                 ldic[each]=depth
         return(ldic)
     return(lsdepth(ls))
+
+    
 lstdepth([1,[2,3,[4,5,[6,7,[9,8,[10]]]]]])
