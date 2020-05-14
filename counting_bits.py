@@ -12,7 +12,6 @@ def count_bits(x):
     for num in range(x+1):
         ones=0
         bls=d2b(num)
-        #print(num,bls)
         for bd in bls:
             #print(bd)
             if bd==1:
